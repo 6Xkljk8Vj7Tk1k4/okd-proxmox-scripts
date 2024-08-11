@@ -3,7 +3,7 @@
 
 ID=29999
 NAME=fcos-template
-STORAGE=local
+STORAGE=zfs-intel
 CPU=4
 RAM=16384
 NET_TYPE=virtio
