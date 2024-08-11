@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ID=29998
-TEMPLATE_STORAGE=zfs-intel
+TEMPLATE_STORAGE=local
 TEMPLATE_NAME=debian-12-standard_12.2-1_amd64.tar.zst
 BRIDGE=vmbr0
 VLAN=20
