@@ -1,7 +1,7 @@
 #!/bin/bash
 #Replace the variables if you need
 
-ID=100
+ID=29999
 NAME=fcos-template
 STORAGE=zfs-intel
 CPU=4
