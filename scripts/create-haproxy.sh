@@ -15,7 +15,7 @@ PATH=$(pwd)
 
 /usr/sbin/pct exec $ID -- bash -c 'apt-get update | apt-get -y install curl gnupg2'
 /usr/sbin/pct exec $ID -- bash -c 'curl https://haproxy.debian.net/bernat.debian.org.gpg | apt-key add -'
-/usr/sbin/pct exec $ID -- bash -c 'echo deb http://haproxy.debian.net buster-backports-2.8 main | tee /etc/apt/sources.list.d/haproxy.list'
+/usr/sbin/pct exec $ID -- bash -c 'echo deb http://haproxy.debian.net bookworm-backports-2.8 main | tee /etc/apt/sources.list.d/haproxy.list'
 /usr/sbin/pct exec $ID -- bash -c 'apt-get update | apt-get -y install haproxy=2.8.\*'
 /usr/sbin/pct push $ID $PATH/extras/haproxy.cfg /etc/haproxy/haproxy.cfg
 /usr/sbin/pct exec $ID -- bash -c 'systemctl restart haproxy'
