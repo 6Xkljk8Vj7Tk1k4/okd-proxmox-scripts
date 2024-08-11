@@ -3,7 +3,7 @@
 ID=$1
 NAME=$2
 MACADDR=$3
-STORAGE=nvme
+STORAGE=zfs-intel
 NET_TYPE=virtio
 BRIDGE=vmbr0
 VLAN=20
