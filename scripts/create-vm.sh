@@ -3,17 +3,16 @@
 ID=$1
 NAME=$2
 MACADDR=$3
-STORAGE=zfs-intel
+STORAGE=data
 NET_TYPE=virtio
 BRIDGE=vmbr0
-VLAN=20
 
 PATH=$(pwd)
 BASE=29999
 ADD_STORAGE=112G
 
 /usr/sbin/qm clone $BASE $ID --name $NAME
-/usr/sbin/qm set $ID --net0 $NET_TYPE,bridge=$BRIDGE,macaddr=$MACADDR,tag=$VLAN
+/usr/sbin/qm set $ID --net0 $NET_TYPE,bridge=$BRIDGE,macaddr=$MACADDR
 
 if [ "$NAME" = "okd-bootstrap" ]; then
    IGNITION=bootstrap
