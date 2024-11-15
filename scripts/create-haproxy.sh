@@ -2,9 +2,9 @@
 
 ID=29998
 TEMPLATE_STORAGE=local
-TEMPLATE_NAME=debian-12-standard_12.2-1_amd64.tar.zst
+TEMPLATE_NAME=debian-12-standard_12.7-1_amd64.tar.zst
 BRIDGE=vmbr0
-STORAGE=zfs-intel
+STORAGE=data
 PATH=$(pwd)
 
 /usr/bin/pveam download $TEMPLATE_STORAGE $TEMPLATE_NAME
