@@ -1,7 +1,7 @@
 #!/bin/bash
 #Go to https://getfedora.org/en/coreos/download?tab=metal_virtualized&stream=stable, replace version
 
-VERSION=40.20240709.3.1
+VERSION=41.20241027.3.0
 
 if [[ -f "fedora-coreos.qcow2" ]]; then
     rm fedora-coreos.qcow2
