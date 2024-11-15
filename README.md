@@ -2,7 +2,7 @@
 
 Scripts for easy install OKD on Proxmox using qcow2 images and templates.
 
-The scripts will help deploying 3 nodes okd 4.5 cluster
+The scripts will help deploying 3 nodes okd 4.15 cluster
 
 ![Scheme](okd_scheme.svg)
 
@@ -23,7 +23,7 @@ The scripts will help deploying 3 nodes okd 4.5 cluster
 ## Installation
 
 Clone repository directly on Proxmox host
->git clone <https://github.com/pvelati/okd-proxmox-scripts.git>
+>git clone <https://github.com/6Xkljk8Vj7Tk1k4/okd-proxmox-scripts>
 
 ## Steps
 
@@ -74,7 +74,7 @@ networking:
   clusterNetwork:
   - cidr: 10.128.0.0/14
     hostPrefix: 23
-  networkType: OpenShiftSDN
+  networkType: OVNKubernetes
   serviceNetwork:
   - 172.30.0.0/16
 platform:
@@ -92,7 +92,7 @@ sshKey: 'ssh-rsa AAAA...='
 
 >sh scripts/deploy-all.sh
 
-### 7. Check bootstrap execution
+### 7. Check bootstrap execution (this can take long time)
 
 >./openshift-install wait-for bootstrap-complete --dir=ignitions/
 
